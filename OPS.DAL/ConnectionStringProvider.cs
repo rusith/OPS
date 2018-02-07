@@ -6,7 +6,7 @@ namespace OPS.DAL
   {
     public string GetConnectionString()
     {
-      return "Server=localhost;Database=ops;UID=root;Password=Pass12@#";
+      return "Server=localhost;Database=ops;UID=root;Password=password";
     }
   }
 }
