@@ -1,0 +1,10 @@
+{
+  "connectionString": "Server=localhost;Database=ops;UID=root;Password=password",
+  "projectPath": "/home/rusith/Documents/Projects/OPS/OPS.DAL",
+  "baseNamespace": "OPS.DAL",
+  "ProjectFile": "OPS.DAL.csproj",
+  "dbms": "mysql",
+  "schema": "ops",
+  "abstractModelsLocation": "./../OPS/Models/Data",
+  "abstractModelsNamespace": "OPS.Models.Data"
+}

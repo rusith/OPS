@@ -9,17 +9,15 @@
 
 using System;
 
-namespace OPS.Models.Data
+namespace OPS.DAL.Dapper
 {
-    public interface IOrder
+    /// <summary>
+    /// Tell Dapper to use an explicit constructor, passing nulls or 0s for all parameters
+    /// </summary>
+    [AttributeUsage(AttributeTargets.Constructor, AllowMultiple = false)]
+    public sealed class ExplicitConstructorAttribute : Attribute
     {
-
-      int ID { get; set; }
-
-      int Quantity { get; set; }
-
-      string Remarks { get; set; }
-
     }
 }
+
 

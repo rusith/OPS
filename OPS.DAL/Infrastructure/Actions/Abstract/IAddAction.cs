@@ -7,19 +7,13 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-using System;
 
-namespace OPS.Models.Data
+
+namespace OPS.DAL.Infrastructure.Actions.Abstract
 {
-    public interface IOrder
+    internal interface IAddAction
     {
-
-      int ID { get; set; }
-
-      int Quantity { get; set; }
-
-      string Remarks { get; set; }
-
+        void Run();
     }
 }
 

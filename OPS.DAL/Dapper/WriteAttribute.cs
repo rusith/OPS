@@ -7,19 +7,18 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
+
 using System;
 
-namespace OPS.Models.Data
+namespace OPS.DAL.Dapper
 {
-    public interface IOrder
+	[AttributeUsage(AttributeTargets.Property)]
+    public class WriteAttribute : Attribute
     {
-
-      int ID { get; set; }
-
-      int Quantity { get; set; }
-
-      string Remarks { get; set; }
-
+        public WriteAttribute(bool write)
+        {
+            Write = write;
+        }
+        public bool Write { get; private set; }
     }
-}
-
+} 

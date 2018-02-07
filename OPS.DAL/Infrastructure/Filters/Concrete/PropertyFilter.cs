@@ -7,19 +7,16 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-using System;
 
-namespace OPS.Models.Data
+using OPS.DAL.Infrastructure.Filters.Abstract;
+
+namespace OPS.DAL.Infrastructure.Filters.Concrete
 {
-    public interface IOrder
+    internal class PropertyFilter : IPropertyFilter
     {
-
-      int ID { get; set; }
-
-      int Quantity { get; set; }
-
-      string Remarks { get; set; }
-
+        public string PropertyName { get; set; }
+        public string Type { get; set; }
+        public object Value { get; set; }
     }
 }
 

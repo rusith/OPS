@@ -7,19 +7,22 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-using System;
 
-namespace OPS.Models.Data
+using OPS.DAL.Infrastructure.Interfaces;
+using OPS.DAL.Infrastructure.Models.Concrete;
+
+namespace OPS.DAL.Infrastructure
 {
-    public interface IOrder
+    internal class Operation : IOperation
     {
+        internal Operation(OperationType type, BaseModel model)
+        {
+            Type = type;
+            Object = model;
+        }
 
-      int ID { get; set; }
-
-      int Quantity { get; set; }
-
-      string Remarks { get; set; }
-
+        public OperationType Type { get; }
+        public BaseModel Object { get; }
     }
 }
 

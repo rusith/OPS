@@ -8,18 +8,24 @@
 // ------------------------------------------------------------------------------
 
 using System;
+using System.Data;
 
-namespace OPS.Models.Data
+namespace OPS.DAL.Dapper
 {
-    public interface IOrder
+    public static partial class SqlMapper
     {
+        private struct DeserializerState
+        {
+            public readonly int Hash;
+            public readonly Func<IDataReader, object> Func;
 
-      int ID { get; set; }
-
-      int Quantity { get; set; }
-
-      string Remarks { get; set; }
-
+            public DeserializerState(int hash, Func<IDataReader, object> func)
+            {
+                Hash = hash;
+                Func = func;
+            }
+        }
     }
 }
+
 

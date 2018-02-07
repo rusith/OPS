@@ -7,19 +7,13 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
+
 using System;
 
-namespace OPS.Models.Data
+namespace OPS.DAL.Dapper 
 {
-    public interface IOrder
+	[AttributeUsage(AttributeTargets.Property)]
+    public class KeyAttribute : Attribute
     {
-
-      int ID { get; set; }
-
-      int Quantity { get; set; }
-
-      string Remarks { get; set; }
-
     }
 }
-

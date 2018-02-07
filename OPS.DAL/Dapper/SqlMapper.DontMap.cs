@@ -7,19 +7,15 @@
 // </auto-generated>
 // ------------------------------------------------------------------------------
 
-using System;
-
-namespace OPS.Models.Data
+namespace OPS.DAL.Dapper
 {
-    public interface IOrder
+    public static partial class SqlMapper
     {
-
-      int ID { get; set; }
-
-      int Quantity { get; set; }
-
-      string Remarks { get; set; }
-
+        /// <summary>
+        /// Dummy type for excluding from multi-map
+        /// </summary>
+        private class DontMap { /* hiding constructor */ }
     }
 }
+
 
