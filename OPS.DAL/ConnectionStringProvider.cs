@@ -1,6 +1,6 @@
-using ops.DAL.Infrastructure.Interfaces;
+using OPS.DAL.Infrastructure.Interfaces;
 
-namespace ops.DAL
+namespace OPS.DAL
 {
   public class ConnectionProvider : IConnectionStringProvider
   {

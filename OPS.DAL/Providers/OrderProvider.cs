@@ -15,11 +15,11 @@ namespace OPS.DAL.Providers
       _context = context;
     }
 
-    public async Task AddOrderAsync(IOrder order)
+    public async Task AddOrderAsync(string remarks, int quantity)
     {
       var unit = _context.Unit();
 
-      unit.OrderRepository.Add(new Order() { Quantity = order.Quantity, Remarks = order.Remarks });
+      unit.OrderRepository.Add(new Order() { Quantity = quantity, Remarks = remarks });
       await unit.CommitAsync();
     }
 

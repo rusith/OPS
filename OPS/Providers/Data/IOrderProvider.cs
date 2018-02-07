@@ -8,7 +8,7 @@ namespace OPS.Providers.Data
   /// </summary>
   public interface IOrderProvider
   {
-    Task AddOrderAsync(IOrder order);
+    Task AddOrderAsync(string remarks, int quantity);
     Task<IOrder> GetOrderAsync(int id);
     Task<IOrder> DeleteOrderAsync(int id);
   }

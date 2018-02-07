@@ -1,7 +1,7 @@
 using OPS.Injection;
 using OPS.DAL.Infrastructure.Interfaces;
 using OPS.DAL.Infrastructure;
-using ops.DAL;
+using OPS.DAL;
 
 namespace OPS.DAL.Modules
 {
