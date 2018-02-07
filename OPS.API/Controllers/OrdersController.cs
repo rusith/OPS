@@ -21,19 +21,43 @@ namespace OPS.API.Controllers
     [HttpGet, Route("{id:int}")]
     public async Task<IOrder> Get(int id)
     {
-      return await _orderService.GetOrder(id);
+      try
+      {
+        return await _orderService.GetOrder(id);
+      }
+      catch (Exception)
+      {
+        HttpContext.Response.StatusCode = 500;
+        return null;
+      }
+
     }
 
     [HttpPost]
     public async void Post([FromBody] OrderModel model)
     {
-      await _orderService.AddOrderAsync(model.Remarks, model.Quantity);
+      try
+      {
+        await _orderService.AddOrderAsync(model.Remarks, model.Quantity);
+      }
+      catch (Exception)
+      {
+        HttpContext.Response.StatusCode = 500;
+      }
     }
 
     [HttpDelete("{id}")]
     public async Task<IOrder> Delete(int id)
     {
-      return await _orderService.RemoveOrder(id);
+      try
+      {
+        return await _orderService.RemoveOrder(id);
+      }
+      catch (Exception)
+      {
+        HttpContext.Response.StatusCode = 500;
+        return null;
+      }
     }
   }
 }
