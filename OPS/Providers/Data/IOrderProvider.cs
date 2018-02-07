@@ -1,5 +1,5 @@
 using System.Threading.Tasks;
-using OPS.Models;
+using OPS.Models.Data;
 
 namespace OPS.Providers.Data
 {

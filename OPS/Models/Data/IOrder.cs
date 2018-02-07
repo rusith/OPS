@@ -1,4 +1,4 @@
-namespace OPS.Models
+namespace OPS.Models.Data
 {
 
   /// <summary>
